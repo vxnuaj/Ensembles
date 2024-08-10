@@ -4,6 +4,10 @@
 >
 > Check out the implementations in the respective folders.
 
+1. [Notes](README.md)
+2. [Bagging Implementation](Bagging/bagging.py)
+3. [Random Forest & Extremely Randomized Trees implementations](RandomForest/randomforest.py)
+
 ## Bagging
 
 **Bagging**, also known as bootstrap aggregating, is an Ensemble Learning method, that uses the same learning algorithm for all $n$ models within the Ensemble.
