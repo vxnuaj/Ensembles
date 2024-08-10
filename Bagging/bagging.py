@@ -95,6 +95,10 @@ class DecisionTree:
                 
     def _information_gain(self, X_col, Y, thresh):
         left_idxs, right_idxs = self._split(X_col, thresh) 
+        
+        if len(left_idxs) == 0 or len(right_idxs) == 0:
+            return 0 
+        
         n = len(Y) 
         n_l = len(left_idxs)
         n_r = len(right_idxs)
