@@ -1,3 +1,7 @@
+# Ensembles
+
+## Bagging
+
 **Bagging**, also known as bootstrap aggregating, is an Ensemble Learning method, that uses the same learning algorithm for all $n$ models within the Ensemble.
 
 It uses $n$ Bootstrap Samples to train $n$ total models.
@@ -42,6 +46,8 @@ $E = \frac{1}{n} \sum_{(x_i, y_i) \in D} e$
 This can then give us an insight on what the true test error would be if the model was implemented on a real-world dataset, without having access to one.
 
 We can also obtain the $\mu$ and the $Var$ for the entire set of classifiers, the $\mu$ being the prediction of the ensemble baesd on soft or hard majority voting and the $Var$ being the level of uncertainty, of the predictions of the model.
+
+## Random Forests
 
 **Random forests** are a set of bagged decision trees, with the addition of some extra randomness to each tree.
 
