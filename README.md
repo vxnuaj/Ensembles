@@ -6,6 +6,14 @@
 
 It uses $n$ Bootstrap Samples to train $n$ total models.
 
+***Bootstrapped samples*** are a set of samples $\hat{X}$ that are drawn from an overarching set of samples $X$ through a uniform distribution.
+
+$\hat{X}$ has samples of $X$ but may miss some samples of $X$ and instead repeat some samples of $X$ multiple times.
+
+This is called sampling with replacement.
+
+The total size of $\hat{X}$ is the same size as $X$.
+
 Then, from each prediction from a given model, $f_i$, you can use the hard majority vote or the soft majority vote from Majority Voting Classifiers and Soft Voting Classifiers respectively, to compute the final prediction for the ensemble.
 
 Given this, in Bagging, it is practical to overfit numerous models on different sets of Bootstrap Samples, and then take the $argmax()$ of a set of averaged probabilities for a set of classes to get a more precise prediction.
@@ -74,5 +82,3 @@ The process of training a Random Forest is very similar to training a set of bag
 2. For each subset, $D_i$, select a random number of features at each node, $m$, to train a decision tree on and leave out the rest, where $m ≤ len(D_i)$
 3. Train the ensemble on each $D_i$, and then run predictions
 4. Get the final predictions using hard or soft majority voting.
-
-
