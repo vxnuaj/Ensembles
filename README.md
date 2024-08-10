@@ -1,6 +1,6 @@
 # Ensembles
 
-> [!Curious?] 
+> [!INFO] 
 > Check out the implementations in the respective folders.
 
 ## Bagging
