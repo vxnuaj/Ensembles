@@ -82,3 +82,15 @@ The process of training a Random Forest is very similar to training a set of bag
 2. For each subset, $D_i$, select a random number of features at each node, $m$, to train a decision tree on and leave out the rest, where $m ≤ len(D_i)$
 3. Train the ensemble on each $D_i$, and then run predictions
 4. Get the final predictions using hard or soft majority voting.
+
+### Extremely Randomized Trees
+
+Similar to random forests, but the subset of trees have more variance in their predictions, each tree is even more different than each.
+
+While the Random Forest makes use of bootstrapping and random feature subsets at each node, Extremely Randomized Trees select a random feature **split** at each node, which increases the variability for each split, given that the **feature split** values vary per split randomly.
+
+The hyperparameters we can change are the:
+
+- The number of bootstrapped samples
+- The number of Random Features to consider at each node.
+- The number of Random Feature Splits (Threshold values) to consider
