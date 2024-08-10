@@ -1,6 +1,7 @@
 # Ensembles
 
-> [!INFO] 
+> [!NOTE]
+>
 > Check out the implementations in the respective folders.
 
 ## Bagging
