@@ -1,9 +1,12 @@
+from nue.models import BaggedTrees
+from nue.preprocessing import x_y_split, train_test_split, csv_to_numpy
+
 #-- train & test the model ---
 
-data = csv_to_numpy('data/DesTreeData.csv')
-train, test = train_test_split(data, train_split=.8)
-X_train, Y_train = x_y_split(train, y_col = 'last')
-X_test, Y_test = x_y_split(test, y_col = 'last')
+data = csv_to_numpy('data/test.csv')
+#train, test = train_test_split(data, train_split=.8)
+X_train, Y_train = x_y_split(data, y_col = 'last')
+#X_test, Y_test = x_y_split(test, y_col = 'last')
 
 verbose_test = True
 n_bootstrap = 100
@@ -18,5 +21,5 @@ dtree_dict = {
 
 model = BaggedTrees(verbose_test = verbose_test) 
 model.train(X_train, Y_train, n_bootstrap = n_bootstrap, dtree_dict = dtree_dict)
-model.test(X_test, Y_test)
+model.test(X_train, Y_train)
 
